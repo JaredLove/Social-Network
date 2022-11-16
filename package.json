@@ -1,0 +1,23 @@
+{
+  "name": "sn",
+  "version": "1.0.0",
+  "description": "Social Network API",
+  "main": "sever.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JaredLove/Social-Network.git"
+  },
+  "author": "Jared Love",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JaredLove/Social-Network/issues"
+  },
+  "homepage": "https://github.com/JaredLove/Social-Network#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  }
+}
