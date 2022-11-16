@@ -95,7 +95,7 @@ const thoughtController = {
       })
       .catch(err => res.json(err));
   },
-
+  // create a reaction
   createReaction({params, body}, res) {
     Thought.findOneAndUpdate(
       {_id: params.thoughtId}, 
@@ -112,7 +112,7 @@ const thoughtController = {
     })
     .catch(err => res.status(400).json(err))
 },
-
+  // delete a reaction
   deleteReaction({ params }, res) {
     Thought.findOneAndUpdate(
       { _id: params.thoughtId },

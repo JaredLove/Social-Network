@@ -1,4 +1,6 @@
+// require monoose with schema and model
 const { Schema, model } = require('mongoose');
+// require dateformat
 const dateFormat = require('../utils/dateFormat');
 
 
@@ -61,6 +63,7 @@ const thoughtSchema = new Schema({
     }
 );
 
+//get the total amount of reaction upon call
 thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });

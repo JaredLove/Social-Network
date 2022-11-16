@@ -1,3 +1,4 @@
+// require monoose with schema and model
 const { Schema, model } = require('mongoose');
 
 
@@ -36,6 +37,7 @@ const userSchema = new Schema({
     }
 );
 
+// get the total amout of friends upon call
 userSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
