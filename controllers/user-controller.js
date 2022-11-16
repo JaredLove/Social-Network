@@ -69,7 +69,7 @@ const userController = {
               res.status(404).json({ message: 'No User found with this id!' });
               return;
             }
-            res.json(dbUserData);
+            res.json('Deleted User');
           });
       })
       .catch(err => res.json(err));
@@ -104,7 +104,7 @@ const userController = {
           res.status(404).json({ message: 'No user found with this id' });
           return;
         }
-        res.json(dbUserData);
+        res.json("Friend Deleted");
       })
       .catch((err) => res.status(400).json(err));
   }
