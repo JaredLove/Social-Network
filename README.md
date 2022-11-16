@@ -5,7 +5,7 @@ Backend social network api calls with models for users, and thoughts. User can a
 
 ## Preview 
 
-
+[Untitled_ Nov 16, 2022 3_55 PM.webm](https://user-images.githubusercontent.com/106944900/202304330-060e12e6-f932-4366-adce-e512783f458d.webm)
 
 
 
