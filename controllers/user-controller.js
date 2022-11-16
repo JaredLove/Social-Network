@@ -20,8 +20,10 @@ const userController = {
     userId({ params }, res) {
         User.findOne({ _id: params.id})
             .populate({
-                path: 'thoughts',
-                select: '-_v'
+                path: 'thoughts'
+            })
+            .populate({
+                path: "friends"
             })
 
                 .then(dbUserData => {
@@ -57,7 +59,7 @@ const userController = {
       })
       .catch(err => res.json(err));
   },
-  // delete user
+  // delete User
   deleteUser({ params }, res) {
     Thought.deleteMany({ userId: params.id })
       .then(() => {
@@ -90,7 +92,7 @@ const userController = {
       })
       .catch((err) => res.status(400).json(err));
   },
-
+  // delete a friend
   deleteFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.userId },
@@ -108,4 +110,5 @@ const userController = {
   }
 };
 
+// exporting the user controller
 module.exports = userController;
